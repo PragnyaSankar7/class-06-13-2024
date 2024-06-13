@@ -21,7 +21,7 @@ x <- read_csv(file = "mass-tracts.csv", show_col_types = FALSE)
 ```{r}
 x |>
   ggplot(aes(x = med_income, fill = race)) + 
-  geom_density(alpha = 0.5, color = "black", adjust = 2) + 
+  geom_density(alpha = 0.5, color = "black", adjust = 6) + 
   scale_x_continuous() + 
   labs(title = "Median Income for Massachusetts Census Tracts",
     subtitle = "The richest tracts are White",
