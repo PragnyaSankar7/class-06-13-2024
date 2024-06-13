@@ -1,0 +1,26 @@
+---
+title: "Mass Census Tracts"
+author: "Pragnyasri Sankar"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+```{r}
+#| label: setup
+#| message: false
+library(tidyverse)
+```
+
+```{r}
+x <- read_csv(file = "data/mass-tracts.csv")
+```
+
+```{r}
+x |>
+  ggplot(aes(x = med_income, fill = race)) + 
+  geom_density(alpha = 0.5) + 
+  scale_x_continuous(limits = c(0, 250000), breaks = seq(0, 250000, 50000)) 
+```
+
